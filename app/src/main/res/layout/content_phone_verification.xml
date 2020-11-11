@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/dryfruits"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_phone_verification">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center|top"
+        android:background="#000000"
+        android:padding="15dp"
+        android:alpha="0.5"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OTP Verification"
+        android:textColor="@color/primary"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:text="Please type the verification code sent \nYour Mobile Number"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Your OTP"
+        android:textSize="24dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/primary"
+        android:textStyle="bold|italic"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/progress_bar"/>
+
+
+
+            <in.aabhasjindal.otptextview.OtpTextView
+                android:id="@+id/otp_view"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bar_enabled="true"
+                app:bar_height="1.5dp"
+                app:bar_active_color="#ffffff"
+                android:textColor="#ffffff"
+                app:bar_inactive_color="#ffffff"
+                app:bar_margin_bottom="0dp"
+                app:bar_margin_left="2dp"
+                app:bar_margin_right="2dp"
+                app:box_margin="0dp"
+                app:height="40dp"
+                app:hide_otp="false"
+                app:length="6"
+                app:otp=""
+                app:otp_text_size="20dp"
+                app:width="40dp"
+                android:layout_marginTop="35dp" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:text="OTP is not recieved?"/>
+            <TextView
+                android:id="@+id/resend_otp"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:autoLink="email"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                android:layout_marginLeft="5dp"
+                android:text="resend OTP"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="VERIFY"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_selector"/>
+    </LinearLayout>
+
+</LinearLayout>

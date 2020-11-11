@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.github.florent37.expansionpanel.ExpansionHeader
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/sample_header_order_status"
+        app:expansion_headerIndicator="@id/header_indicator_order_status"
+        app:expansion_layout="@id/expansion_layout_order_status"
+        app:expansion_toggleOnClick="true">
+
+        <RelativeLayout
+            android:background="@android:color/white"
+            android:layout_height="48dp"
+            android:layout_width="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Order Status"
+                android:textColor="#3E3E3E" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:adjustViewBounds="true"
+                android:id="@+id/header_indicator_order_status"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_width="wrap_content"
+                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+        </RelativeLayout>
+
+    </com.github.florent37.expansionpanel.ExpansionHeader>
+    <com.github.florent37.expansionpanel.ExpansionLayout
+        android:id="@+id/expansion_layout_order_status"
+        app:expansion_expanded="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="#f3f3f3"
+                android:padding="20dp"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/remove_from_cart_color"
+                        android:textStyle="bold"
+                        android:text="@string/estimated_string"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:textColor="@color/md_black_1000"
+                        android:textStyle="bold"
+                        android:id="@+id/estimated_time_txt"
+                        android:text="30 minutes"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/remove_from_cart_color"
+                        android:textStyle="bold"
+                        android:text="@string/order_number_string"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:id="@+id/order_number_txt"
+                        android:textColor="@color/md_black_1000"
+                        android:textStyle="bold"
+                        android:text="#1234567"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:weightSum="9"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_order_place"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:paddingLeft="20dp"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="20dp"
+                                android:textColor="#000"
+                                android:text="Order Placed"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:textColor="#9f9f9f"
+                                android:text="We have received your order"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="match_parent"
+                        android:background="#f9f9f9"
+                        android:alpha="0.7"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:paddingLeft="50dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:background="#9f9f9f"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:id="@+id/order_confirmed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_order_confirmed"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:paddingLeft="20dp"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="20dp"
+                                android:textColor="#000"
+                                android:text="Order Confirmed"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:textColor="#9f9f9f"
+                                android:text="Your Order has been confirmed"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/order_confirmed_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#f9f9f9"
+                        android:alpha="0.7"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/order_confirmed_bar"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:background="#9f9f9f"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/order_packed"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_packed"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:paddingLeft="20dp"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="20dp"
+                                android:textColor="#000"
+                                android:text="Order Packed"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:textColor="#9f9f9f"
+                                android:text="Your order packed and ready to pickup"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/order_packed_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#f9f9f9"
+                        android:alpha="0.7"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/order_packed_bar"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:background="#9f9f9f"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/order_on_the_way"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_on_the_way_order"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:paddingLeft="20dp"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="20dp"
+                                android:textColor="#000"
+                                android:text="Order On The Way"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:textColor="#9f9f9f"
+                                android:text="Our executive will deliver your order"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/order_on_the_way_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#f9f9f9"
+                        android:alpha="0.7"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/order_on_the_way_bar"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:background="#9f9f9f"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:id="@+id/order_delivered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_order_delivered"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:paddingLeft="20dp"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="20dp"
+                                android:textColor="#000"
+                                android:text="Order Delivered"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:textColor="#9f9f9f"
+                                android:text="Your order delivered"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/order_delivered_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#f9f9f9"
+                        android:alpha="0.7"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    android:id="@+id/order_cancled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_order_cancel"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:paddingLeft="20dp"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="20dp"
+                                android:textColor="#000"
+                                android:text="Order Cancled"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:textColor="#9f9f9f"
+                                android:text="Your order cancled"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:text="Badam"
+        android:layout_height="wrap_content"
+        android:id="@+id/product_name"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="right"
+            android:text="500kg"
+            android:layout_height="wrap_content"
+            android:id="@+id/product_weight"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/multiply_txt"
+            android:text=" X "/>
+        <TextView
+            android:layout_width="wrap_content"
+
+            android:text="5"
+            android:layout_height="wrap_content"
+            android:id="@+id/quantity_txt"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:text="Rs. 2000"
+        android:layout_height="wrap_content"
+        android:id="@+id/total_price"/>
+
+
+</LinearLayout>
